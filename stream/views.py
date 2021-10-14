@@ -9,7 +9,7 @@ import os
 
 class VideoCamera(object):
     def __init__(self):
-        url = 'rtsp://admin:parol12345@192.168.4.220:554/cam/realmonitor?channel=1&subtype=0'
+        url = 0
         self.video = cv2.VideoCapture(url)
         (self.grabbed, self.frame) = self.video.read()
         threading.Thread(target=self.update, args=()).start()
